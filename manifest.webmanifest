@@ -1,0 +1,35 @@
+{
+  "id": "./",
+  "name": "چوب‌خط — دستیار مدیریت هزینه پروژه",
+  "short_name": "چوب‌خط",
+  "description": "ثبت و مدیریت هزینه، پرداخت، فاکتور و طرف‌حساب پروژه‌ها",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./?app=choobkhat-v32",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0e1621",
+  "theme_color": "#17212b",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "./choobkhat-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./choobkhat-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./choobkhat-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

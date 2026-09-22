@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl" data-build="choobkhat-v32">
+<html lang="fa" dir="rtl" data-build="choobkhat-v33">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1242,6 +1242,51 @@ html[data-theme="dark"] #payment [style*="color:#334155"],
 html[data-theme="dark"] #payment [style*="color:#475569"],
 html[data-theme="dark"] #payment [style*="color:#64748b"]{color:#c3d0da!important}
 
+/* Version 33 — absolute Telegram night palette guard.
+   This block intentionally comes last so no legacy warm color can leak into dark mode. */
+html[data-theme="dark"]{
+  --warm-ink:#f5f7fa;
+  --warm-muted:#b8c6d1;
+  --warm-deep:#3390ec;
+  --warm-deep-2:#2b5278;
+  --warm-coral:#58a6ff;
+  --warm-orange:#3390ec;
+  --warm-gold:#77bdf3;
+  --warm-paper:#17212b;
+  --warm-surface:#202b36;
+  --warm-shadow:rgba(0,0,0,.28);
+}
+html[data-theme="dark"] body *{color:#f5f7fa!important;border-color:#344654!important}
+html[data-theme="dark"] body *::before,
+html[data-theme="dark"] body *::after{border-color:#344654!important}
+html[data-theme="dark"] body :where(
+  small,.muted,.dashboard-subtitle,.stat-label,.stat-note,.card-label,
+  .quick-action small,.section-head small,.invoice-items-head span,.mini-label,
+  .select-note,.backup-hero p,.backup-status-card span,.backup-version-info span,
+  .project-entry-head p,.project-entry-info span,.voice-status,.voice-permission-help,
+  .voice-archive-help,.voice-archive-head span,.invoice-enter-tip,
+  .document-summary-grid span,.asset-row span,.donut-center,.form-hint
+){color:#b8c6d1!important}
+html[data-theme="dark"] body :where(a,.receipt-link,.row-open-hint,.sort-header.active){color:#77bdf3!important}
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder{color:#91a0ac!important}
+html[data-theme="dark"] body :where(
+  .entry-method,.expense-category-row,.new-expense-type-box,.voice-stage,.voice-audio-wrap,
+  .voice-storage-note,.invoice-enter-tip kbd,.nature-select,.asset-row.asset-head,
+  .asset-empty,.report-columns-box,.report-column-choice,.smart-result,.smart-item,
+  .document-kind-btn,.field-action-btn,.date-parts button,.smart-date-picker .date-today-btn
+){background:#273544!important;color:#f5f7fa!important;border-color:#3a4c5d!important;box-shadow:none!important}
+html[data-theme="dark"] body :where(
+  .entry-method.active,.document-kind-btn.active,.btn-primary,.quick-action.primary,
+  .field-action-btn:focus,.date-parts button:focus,.smart-date-picker .date-today-btn:focus
+){background:linear-gradient(145deg,#3390ec,#287bbc)!important;color:#fff!important;border-color:#4ba8ef!important}
+html[data-theme="dark"] #reports>.panel .section-head h3,
+html[data-theme="dark"] #payment .page-title h2,
+html[data-theme="dark"] #paymentTitle,
+html[data-theme="dark"] #payment .entry-method b,
+html[data-theme="dark"] #dashboard .quick-action b{color:#f5f7fa!important}
+html[data-theme="dark"] #reports>.panel .section-head small{color:#b8c6d1!important}
+
 /* The only white surface in dark mode is the isolated printable report sheet. */
 html[data-theme="dark"] #reports .report-print-sheet{background:#fff!important;color:#1f2933!important}
 html[data-theme="dark"] #reports .report-print-sheet *{color:#1f2933!important}
@@ -2161,7 +2206,7 @@ const AUTO_BACKUP_STORE = "snapshots";
 const AUTO_BACKUP_LIMIT = 10;
 const VOICE_RECORDING_STORE = "voice_recordings";
 const VOICE_RECORDING_LIMIT = 40;
-const APP_VERSION = 32;
+const APP_VERSION = 33;
 const THEME_KEY = "project_theme_mode";
 const PERSIAN_MONTHS = ["فروردین","اردیبهشت","خرداد","تیر","مرداد","شهریور","مهر","آبان","آذر","دی","بهمن","اسفند"];
 const IRANIAN_BANKS = ["بانک مرکزی","ملی","سپه","صادرات","تجارت","ملت","کشاورزی","مسکن","رفاه کارگران","صنعت و معدن","توسعه صادرات","توسعه تعاون","اقتصاد نوین","پارسیان","پاسارگاد","کارآفرین","سامان","سینا","شهر","آینده","گردشگری","دی","ایران‌زمین","خاورمیانه","رسالت","مهر ایران","پست بانک","ملل","نور","سایر"];

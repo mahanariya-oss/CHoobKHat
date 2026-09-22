@@ -1,4 +1,4 @@
-const CHOOBKHAT_CACHE="choobkhat-shell-v32";
+const CHOOBKHAT_CACHE="choobkhat-shell-v33";
 const CHOOBKHAT_SHELL=[
   "./",
   "./index.html",

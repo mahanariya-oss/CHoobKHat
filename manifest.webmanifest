@@ -5,7 +5,7 @@
   "description": "ثبت و مدیریت هزینه، پرداخت، فاکتور و طرف‌حساب پروژه‌ها",
   "lang": "fa",
   "dir": "rtl",
-  "start_url": "./?app=choobkhat-v32",
+  "start_url": "./?app=choobkhat-v33",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
